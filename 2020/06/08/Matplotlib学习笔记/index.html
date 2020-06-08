@@ -15,13 +15,13 @@
 <meta property="og:site_name" content="Welcome to jx&#39;s dailylife">
 <meta property="og:description" content="本文章记录对Matplotlib的学习">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C1.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C2.jpg">
 <meta property="article:published_time" content="2020-06-08T02:03:06.000Z">
-<meta property="article:modified_time" content="2020-06-08T02:08:46.602Z">
+<meta property="article:modified_time" content="2020-06-08T02:18:39.846Z">
 <meta property="article:author" content="Jixin CHEN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Welcome to jx&#39;s dailylife" type="application/atom+xml">
   
@@ -188,11 +188,11 @@
 <p><strong>曲线图</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; [0,1,2,3,4,5]</span><br><span class="line">y &#x3D; [0,2,4,6,8,10]</span><br><span class="line"></span><br><span class="line">#改变图片大小</span><br><span class="line">plt.figure(figsize&#x3D;(5,3),dpi&#x3D;100)</span><br><span class="line"></span><br><span class="line">#设置标题</span><br><span class="line">plt.title(&#39;mu first graph&#39;,fontdict&#x3D;&#123;&#39;fontname&#39;: &#39;Comic Sans MS&#39;,&#39;fontsize&#39;:20&#125;)</span><br><span class="line"></span><br><span class="line">#设置xy轴名字</span><br><span class="line">plt.xlabel(&#39;x Axis&#39;)</span><br><span class="line">plt.ylabel(&#39;y Axis&#39;)</span><br><span class="line"></span><br><span class="line">plt.plot(x,y,label&#x3D;&#39;2x&#39;)</span><br><span class="line"></span><br><span class="line">#画第二条线</span><br><span class="line">x2 &#x3D; np.arange(0,4,0.5)</span><br><span class="line">plt.plot(x2,x2**2,&#39;r&#39;,label&#x3D;&#39;x^2&#39;)</span><br><span class="line"></span><br><span class="line">#设置xy轴上显示的值</span><br><span class="line">plt.xticks([0,1,2,3,4])</span><br><span class="line">plt.yticks([0,2,4,6,8,10])</span><br><span class="line"></span><br><span class="line">#显示曲线label</span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line">#保存图片</span><br><span class="line">plt.savefig(&#39;mygraph.png&#39;,dpi&#x3D;300)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1.jpg" alt></p>
+<p><img src="/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C1.jpg" alt="1"></p>
 <p><strong>柱状图</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">labels &#x3D; [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;]</span><br><span class="line">values &#x3D; [1,4,2]</span><br><span class="line"></span><br><span class="line">bars &#x3D; plt.bar(labels,values)</span><br><span class="line"></span><br><span class="line">bars[0].set_hatch(&#39;&#x2F;&#39;)</span><br><span class="line">bars[1].set_hatch(&#39;o&#39;)</span><br><span class="line">bars[2].set_hatch(&#39;*&#39;)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize&#x3D;(6,4))</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2.jpg" alt></p>
+<p><img src="/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C2.jpg" alt="2"></p>
 
       
 
