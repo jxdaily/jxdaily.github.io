@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Welcome to jx&#39;s dailylife</title>
+  <title>C#学习之打印 Hello World | Welcome to jx&#39;s dailylife</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="just for fun">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to jx&#39;s dailylife">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="因为参与的项目需要阅读和编译C#代码，但是由于之前没有接触过C#，于是通过C#的简单学习，希望能够有所帮助，本文记录通过多种方式打印Hello World">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#学习之打印 Hello World">
+<meta property="og:url" content="http://yoursite.com/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/index.html">
 <meta property="og:site_name" content="Welcome to jx&#39;s dailylife">
-<meta property="og:description" content="just for fun">
+<meta property="og:description" content="因为参与的项目需要阅读和编译C#代码，但是由于之前没有接触过C#，于是通过C#的简单学习，希望能够有所帮助，本文记录通过多种方式打印Hello World">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/4.jpg">
+<meta property="article:published_time" content="2020-07-04T00:07:45.000Z">
+<meta property="article:modified_time" content="2020-07-04T00:47:56.234Z">
 <meta property="article:author" content="Jixin CHEN">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Welcome to jx&#39;s dailylife" type="application/atom+xml">
   
@@ -152,157 +159,177 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-C#学习之打印-Hello-World" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      C#学习之打印 Hello World
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/" class="archive-article-date">
+
+        
+        <a href="/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/" class="archive-article-date">
   	<time datetime="2020-07-04T00:07:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/">C#学习之打印 Hello World</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>因为参与的项目需要阅读和编译C#代码，但是由于之前没有接触过C#，于是通过C#的简单学习，希望能够有所帮助，本文记录通过多种方式打印Hello World</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>创建Project时，由于没有Solution包含我们的Projet，所以会自动新建一个Solution来包含我们新建的Project</p>
+<p><strong>Console Application</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line"></span><br><span class="line">namespace ConsoleApp1</span><br><span class="line">&#123;</span><br><span class="line">    class Program</span><br><span class="line">    &#123;</span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(&quot;Hello World!&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><strong>Windows Forms（Old）</strong></p>
+<p>创建完windows窗体应用项目后会自动生成一个窗体</p>
+<p><img src="/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/1.jpg" alt="1"></p>
+<p>从左边工具箱中搜索Textbox和Button，将其拖到窗体中</p>
+<p><img src="/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/2.jpg" alt="2"></p>
+<p>拖进窗体后如图所示</p>
+<p><img src="/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/3.jpg" alt="3"></p>
+<p>点击Button在右下角为其设置属性和事件</p>
+<p><img src="/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/4.jpg" alt="4"></p>
+<p>其中闪电就是添加事件，为Button添加Click事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.ComponentModel;</span><br><span class="line">using System.Data;</span><br><span class="line">using System.Drawing;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line">using System.Windows.Forms;</span><br><span class="line"></span><br><span class="line">namespace WindowsFormsApp2</span><br><span class="line">&#123;</span><br><span class="line">    public partial class Form1 : Form</span><br><span class="line">    &#123;</span><br><span class="line">        public Form1()</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void buttonsayhello_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">        	#TextBox的名字属性.Text</span><br><span class="line">			textBoxshowhello.Text &#x3D; &quot;Hello World&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>WPF</strong></p>
+<p>操作与Windows Forms类似，相当于是其进化版</p>
+<p>暂时写到这里</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/04/C#%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%89%93%E5%8D%B0-Hello-World/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/18/%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6OCR%E8%BF%9B%E8%A1%8C%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2020-06-18T14:38:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/18/%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6OCR%E8%BF%9B%E8%A1%8C%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用百度OCR进行图片文字识别</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/18/%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6OCR%E8%BF%9B%E8%A1%8C%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/">使用百度OCR进行图片文字识别</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-06-08T02:03:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/08/Matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Matplotlib学习笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/06/1h%E6%8E%8C%E6%8F%A1Numpy%E6%95%99%E7%A8%8B-%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84%E3%80%81%E7%B4%A2%E5%BC%95%E3%80%81%E6%95%B0%E5%AD%A6%E3%80%81%E7%BB%9F%E8%AE%A1%E3%80%81%E9%87%8D%E5%A1%91/" class="archive-article-date">
-  	<time datetime="2020-06-06T12:42:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/06/1h%E6%8E%8C%E6%8F%A1Numpy%E6%95%99%E7%A8%8B-%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84%E3%80%81%E7%B4%A2%E5%BC%95%E3%80%81%E6%95%B0%E5%AD%A6%E3%80%81%E7%BB%9F%E8%AE%A1%E3%80%81%E9%87%8D%E5%A1%91/">1h掌握Numpy教程(创建数组、索引、数学、统计、重塑)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/06/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-06-06T03:20:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/06/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">hexo博客的搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -325,8 +352,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
