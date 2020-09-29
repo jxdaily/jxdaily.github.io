@@ -16,7 +16,7 @@
 <meta property="og:description" content="课程：数理统计 简单记录课堂笔记">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-26T11:04:12.000Z">
-<meta property="article:modified_time" content="2020-09-26T11:33:47.770Z">
+<meta property="article:modified_time" content="2020-09-29T09:37:29.084Z">
 <meta property="article:author" content="Jixin CHEN">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="数理统计">
@@ -180,7 +180,7 @@
         <p>课程：数理统计</p>
 <p>简单记录课堂笔记</p>
 <a id="more"></a>
-<h1 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h1><h2 id="1-常见分布"><a href="#1-常见分布" class="headerlink" title="1 常见分布"></a>1 常见分布</h2><h3 id="1-1-0-1分布"><a href="#1-1-0-1分布" class="headerlink" title="1.1 0-1分布"></a>1.1 0-1分布</h3><p>又称伯努利分布,成功概率p，失败概率q，p = 1 - q</p>
+<h1 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h1><h2 id="1-常见分布"><a href="#1-常见分布" class="headerlink" title="1 常见分布"></a>1 常见分布</h2><h3 id="1-1-0-1分布"><a href="#1-1-0-1分布" class="headerlink" title="1.1 0-1分布"></a>1.1 0-1分布</h3><p>又称伯努利分布,成功概率p，失败概率q，p = 1-q</p>
 <script type="math/tex; mode=display">
 P(X=k)=p^k(1-p)^{1-k}\\k=0,1</script><p><strong>期望</strong> ：$E=p$</p>
 <p><strong>方差</strong>：$D = p(1-p)$</p>
@@ -211,7 +211,32 @@ f(x)=\left\{\begin{array}{ll}
 <script type="math/tex; mode=display">
 f(x \mid \mu, \sigma)=\frac{1}{\sqrt{2 \pi \sigma^{2}}} e^{-\frac{(x-\mu)^{2}}{2 \sigma^{2}}}</script><p><strong>期望</strong>：$E=\mu$</p>
 <p><strong>方差</strong>：$D=\sigma^2$</p>
-
+<h2 id="2-性质"><a href="#2-性质" class="headerlink" title="2 性质"></a>2 性质</h2><h3 id="2-1-期望的性质"><a href="#2-1-期望的性质" class="headerlink" title="2.1 期望的性质"></a>2.1 期望的性质</h3><ol>
+<li>设$X$是随机变量，$c$是常数，则$E(cX)=cE(x)$</li>
+<li>设$X,Y$是任意两个随机变量，则有$E(X+Y)=E(X)+E(Y)$</li>
+<li>设$X,Y$是相互独立的随机变量，则有$E(XY)=E(X)E(Y)$</li>
+<li>设$c$为常数，则$E(c)=c$</li>
+</ol>
+<h3 id="2-2-方差的性质"><a href="#2-2-方差的性质" class="headerlink" title="2.2 方差的性质"></a>2.2 方差的性质</h3><ol>
+<li>设$c$为常数，则$D(c)=0$</li>
+<li>设$k$为常数，$X$为随机变量，则$D(kX)=k^2D(x)$</li>
+<li>设$a,b$为常数，$X$为随机变量，则$D(aX+b)=a^2D(X)$</li>
+<li><p>设$X$为随机变量，则$DX=E(X^2)-E^2(X)$</p>
+</li>
+<li><p>设随机变量$X,Y$独立，则$D(X\pm Y)=DX\pm DY$</p>
+</li>
+</ol>
+<h2 id="3-大数定理和中心极限定理"><a href="#3-大数定理和中心极限定理" class="headerlink" title="3 大数定理和中心极限定理"></a>3 大数定理和中心极限定理</h2><h3 id="3-1-大数定理"><a href="#3-1-大数定理" class="headerlink" title="3.1 大数定理"></a>3.1 大数定理</h3><p>$X_1,X_2,…X_n$独立同分布，即$\bar{X}=\frac{1}{n} \sum_{i=1}^{n}X_{i}$ </p>
+<p>已知$EX_i=\mu$ 则有大数定理</p>
+<p>$\forall \varepsilon&gt;0,\lim _{n \rightarrow \infty} P\{|\bar{X}-EX|&lt;\varepsilon\}=1$</p>
+<p>即$\bar X$依概率收敛于$EX$ 即$\bar X=EX$</p>
+<h3 id="3-2-中心极限定理"><a href="#3-2-中心极限定理" class="headerlink" title="3.2 中心极限定理"></a>3.2 中心极限定理</h3><p>$X_1,X_2,…X_n$独立同分布，即$\bar{X}=\frac{1}{n} \sum_{i=1}^{n}X_{i}$</p>
+<p>已知$EX_i=\mu,DX_i=\sigma^2$  则有中心极限定理：（不管原来什么分布，当n足够大时，趋近于正态分布）</p>
+<p>对于$\begin{array}{l}<br>\forall x \in R    有    \lim _{n \rightarrow \infty} P\left\{\frac{\bar{X}-\mu}{\sigma / \sqrt{n}}&lt;x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} e^{-\frac{u^2}{2}} d u<br>\end{array}$</p>
+<p>则：$\bar{X}\sim N(\sigma,\frac{\mu^2}{n})$ 或 $U = \frac{\bar{X}-\mu}{\sigma/ \sqrt{n}} \sim N(0,1)$</p>
+<p><strong>不管是何种分布，当取n（n趋于无穷）项随机事件时，有$\bar{X} \sim N(E(\bar{X}),D(\bar{X}))$</strong></p>
+<p><strong>其中，$E \bar{X} = EX,D \bar{X} = \frac{1}{n}DX$</strong></p>
+<h2 id="4-协方差与相关系数"><a href="#4-协方差与相关系数" class="headerlink" title="4 协方差与相关系数"></a>4 协方差与相关系数</h2>
       
 
       
