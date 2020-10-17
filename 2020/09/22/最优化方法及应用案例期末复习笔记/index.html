@@ -16,7 +16,7 @@
 <meta property="og:description" content="简单记录最优化理论笔记，用于期末复习使用">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-22T13:55:24.000Z">
-<meta property="article:modified_time" content="2020-09-29T15:23:22.881Z">
+<meta property="article:modified_time" content="2020-10-17T09:14:38.582Z">
 <meta property="article:author" content="Jixin CHEN">
 <meta property="article:tag" content="最优化">
 <meta property="article:tag" content="笔记">
@@ -182,7 +182,7 @@
 <h1 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h1><h2 id="1-1-最优化问题概述"><a href="#1-1-最优化问题概述" class="headerlink" title="1.1 最优化问题概述"></a>1.1 最优化问题概述</h2><p>从数学上看，定量的最优化问题就是寻找n元函数$f(X)$的极值点。当$f$是普通函数，$X\in R^n$，这类优化问题称为数学规划即MP，变量$X$可能没有限制也可能受有限个等式或不等式约束。一般模型可表示为：</p>
 <script type="math/tex; mode=display">
 minf(X)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
-g_i(x)<=0~~(i=1,2,...,m)\\
+g_i(x)\le0~~(i=1,2,...,m)\\
 h_j(x)=0~~~~~~(h=1,2,...,p)</script><h2 id="1-2-最优化模型建立"><a href="#1-2-最优化模型建立" class="headerlink" title="1.2 最优化模型建立"></a>1.2 最优化模型建立</h2><p>例题P3</p>
 <h2 id="1-3-最优解及算法概述"><a href="#1-3-最优解及算法概述" class="headerlink" title="1.3 最优解及算法概述"></a>1.3 最优解及算法概述</h2><h3 id="1-3-1-最优解的基本概念"><a href="#1-3-1-最优解的基本概念" class="headerlink" title="1.3.1 最优解的基本概念"></a>1.3.1 最优解的基本概念</h3><p>对于：</p>
 <script type="math/tex; mode=display">
@@ -225,12 +225,121 @@ X = aX_1+(1-a)X_2</script><p>则称$X$为凸集$D$的顶点。顶点一定不在
 <p>Step4：找最小比值$\theta_i$ 和最大检验数，确定主元素，进行初等行变换得到新的单纯性形表（$C_B$和$X_B$都要重新写）</p>
 <p><strong>注：</strong></p>
 <ol>
-<li><p>若比值$\theta_i$都是“-”，即没有正数，则说明最大值为无穷大，无界（没有最优解）</p>
-</li>
-<li><p>若比值$\theta_i$有多个相同最小值，则可以任意选择一个</p>
-</li>
+<li>若比值$\theta_i$都是“-”，即没有正数，则说明最大值为无穷大，无界（没有最优解）</li>
+<li>若比值$\theta_i$有多个相同最小值，则可以任意选择一个</li>
 <li>若对检验数$C_j-Z_j$有多个相同最大值，则可任意选择一个</li>
 </ol>
+<p><strong>单纯形法进一步讨论</strong></p>
+<p><strong>1. 人工变量法（大M法）</strong></p>
+<p><strong>（1）</strong>改造约束条件</p>
+<p>①“&gt;=”：减去一个剩余变量后，再加一个人工变量</p>
+<p>②“=”：加一个人工变量</p>
+<p><strong>（2）</strong> 改造目标函数</p>
+<p>①人工变量系数设为为：“-M”，即罚因子</p>
+<p>②若线性规划问题有最优解则人工变量必为0</p>
+<p><strong>（3）</strong> 迭代</p>
+<p>按照初始形法，画出初始形表进行迭代计算最优解</p>
+<p><strong>2. 两阶段法</strong></p>
+<p><strong>（1）</strong> 第一阶段</p>
+<p>通过求解辅助问题的最优基可行解得到原问题的初始基可行解</p>
+<p><strong>（2）</strong>第二阶段</p>
+<p>求原问题的最优解</p>
+<h3 id="2-2-3-对偶问题"><a href="#2-2-3-对偶问题" class="headerlink" title="2.2.3 对偶问题"></a>2.2.3 对偶问题</h3><p><strong>1、实际问题中对偶问题的提出</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原问题</th>
+<th style="text-align:center">对偶问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">max</td>
+<td style="text-align:center">min</td>
+</tr>
+<tr>
+<td style="text-align:center">目标函数系数</td>
+<td style="text-align:center">右端项</td>
+</tr>
+<tr>
+<td style="text-align:center">约束条件的系数矩阵</td>
+<td style="text-align:center">与原问题互为转置</td>
+</tr>
+<tr>
+<td style="text-align:center">max，&lt;=0(约束)，&gt;=0(变量)</td>
+<td style="text-align:center">min，&gt;=0(约束)，&lt;=0(变量)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>2、快速写出对偶问题</strong></p>
+<p>对称形式</p>
+<p><strong>原问题</strong></p>
+<script type="math/tex; mode=display">
+maxZ=C^TX\\st.\left\{\begin{array}{cc}
+AX\le b \\
+X\ge 0
+\end{array}\right.</script><p><strong>对偶问题</strong></p>
+<script type="math/tex; mode=display">
+minW=A^TY\\st.\left\{\begin{array}{cc}
+A^TY\le c \\
+Y\le 0
+\end{array}\right.</script><p>口诀：正常的对正常的，不正常的对不正常的</p>
+<p> 例题如下图：</p>
+<p><strong>3、对偶理论</strong></p>
+<p>（1）对称性</p>
+<p>​    对偶问题的对偶是原问题</p>
+<p>（2）弱对偶性</p>
+<p>​    原问题的任一个目标值(max,可行)，不超过对偶问题的任一个目标值(min,可行)</p>
+<p>（3）无界性</p>
+<p>​    原问题无界，则对偶问题不可行</p>
+<p>​    原问题不可行，则对偶问题无界或者不可行</p>
+<p>（4）原问题有最优值，则对偶问题也有最优值，且相等</p>
+<p>​    原问题的某个解对应的目标值，与对偶问题的某个解对应的目标值相同，则这些都是最优解</p>
+<p>（5）互补松弛性(松紧定理)</p>
+<p>​    约束为松，则对偶变量为0</p>
+<p>​    对偶变量&gt;0，则约束为紧（=0/资源刚好消耗完）</p>
+<p><strong>4、求最优解需满足</strong>（对应非线性规划称为：KKT条件）</p>
+<p>（1）原问题的可行性</p>
+<p>（2）对偶问题的可行性</p>
+<p>（3）互补松弛性</p>
+<p>例题</p>
+<script type="math/tex; mode=display">
+minW=2x_1+3x_2+5x_3+2x_4+3x_5\\st.\left\{\begin{array}{cc}x_1+x_2+2x_3+x_4+3x_5\ge4\\ 2x_1-x_2+3x_3+x_4+x_5\ge3\\x_j\ge0,j=1,2...5
+\end{array}\right.</script><p>已知对偶问题的最优解为<script type="math/tex">y^*_1=\frac{4}{5},y^*_2=\frac{3}{5},Z=5</script> 试求原问题的最优解</p>
+<p>①写出对偶问题：</p>
+<script type="math/tex; mode=display">
+maxZ=4y_1+3y_2\\st.\left\{\begin{array}{cc}y_1+2y_2\le2\\y_1-y_2\le3\\2y_1+3y_2\le5\\y_1+y_2\le2\\3y_1+y_3\le3\\y_1,y_2\ge0
+\end{array}\right.</script><p>②将$y^<em>_1,y^</em>_2$ 的值带入对偶问题的约束中，确定这5个约束是紧约束还是松约束</p>
+<script type="math/tex; mode=display">
+st.\left\{\begin{array}{cc}y_1+2y_2\le2（紧）\Rightarrow x_1\ge0\\y_1-y_2\le3（松）\Rightarrow x_2=0\\2y_1+3y_2\le5（松）\Rightarrow x_3=0\\y_1+y_2\le2（松）\Rightarrow x_4=0\\3y_1+y_3\le3（紧）\Rightarrow x_5\ge0\\y_1,y_2\ge0
+\end{array}\right.</script><p>③将$x_2=x_3=x_4=0$ 带入原问题则有：</p>
+<script type="math/tex; mode=display">
+st.\left\{\begin{array}{cc}x_1+x_2+2x_3+x_4+3x_5\ge4 \Rightarrow x_1+3x_5\ge 4且y^*_1>0\Rightarrow x_1+3x_5=4\\ 2x_1-x_2+3x_3+x_4+x_5\ge3 \Rightarrow 2x_1+x_5\ge 3且y^*_2>0\Rightarrow 2x_1+x_5=3\\x_j\ge0,j=1,2...5
+\end{array}\right.</script><p>通过解方程得$x^<em>_1=1,x^</em>_5=1$ 就可以写出最优解和最优值了</p>
+<h3 id="2-2-4-对偶单纯形法"><a href="#2-2-4-对偶单纯形法" class="headerlink" title="2.2.4 对偶单纯形法"></a>2.2.4 对偶单纯形法</h3><p>对偶单纯形法不是求解对偶问题的，而是求原问题的</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原问题</th>
+<th style="text-align:center">对偶问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">保证解的可行性</td>
+<td style="text-align:center">保证解的最优性</td>
+</tr>
+<tr>
+<td style="text-align:center">从不是最优迭代到最优</td>
+<td style="text-align:center">从不是可行迭代到可行</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="2-2-5-灵敏度分析"><a href="#2-2-5-灵敏度分析" class="headerlink" title="2.2.5 灵敏度分析"></a>2.2.5 灵敏度分析</h3><p>当某些数据变化时，最优解、最优值、最优基将如何改变？原始数据求解的单纯形表还能不能用上？</p>
 
       
 
